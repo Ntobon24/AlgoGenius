@@ -22,3 +22,8 @@ def recorrer_matriz(matriz, inicio_fila, fin_fila, inicio_columna, fin_columna):
                                  fin_columna - 1)
 
     return elementos
+
+def matriz_espiral(matriz):
+    if not matriz:
+        return []
+    return recorrer_matriz(matriz, 0, len(matriz), 0, len(matriz[0]))
