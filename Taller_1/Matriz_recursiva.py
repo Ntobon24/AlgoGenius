@@ -13,3 +13,7 @@ def recorrer_matriz(matriz, inicio_fila, fin_fila, inicio_columna, fin_columna):
     if inicio_fila != fin_fila - 1:
             for i in range(fin_fila - 2, inicio_fila - 1, -1):
                 elementos.append(matriz[i][fin_columna - 1])
+
+    if inicio_columna != fin_columna - 1:
+            for i in range(fin_columna - 2, inicio_columna, -1):
+                elementos.append(matriz[inicio_fila][i])
