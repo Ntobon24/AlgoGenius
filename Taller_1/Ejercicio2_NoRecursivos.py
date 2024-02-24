@@ -1,3 +1,6 @@
+# Equipo AlgoGenius
+# Ejercicio 2 (No Recursivo) - Nicolás Tobón, Santiago Giraldo, Matías Herrera
+
 
 #algoritmo euclidiano no recursivo para encontrar el MCD de dos números.
 def algoritmo_euclidiano(a: int, b: int) -> int: # O(Log n), O(1)
