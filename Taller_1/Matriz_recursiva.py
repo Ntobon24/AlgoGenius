@@ -28,9 +28,3 @@ def matriz_espiral(matriz):
         return []
     return recorrer_matriz(matriz, 0, len(matriz), 0, len(matriz[0]))
 
-matriz = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]]
-
-print(matriz_espiral(matriz))
