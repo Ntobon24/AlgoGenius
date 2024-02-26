@@ -1,4 +1,5 @@
-#Ejercicio 1 (No Recursivo)
+# Equipo AlgoGenius
+#Ejercicio 1 (No Recursivo) - Nicolás Tobón, Santiago Giraldo, Matías Herrera
 
 def sumar_array(array): # O(n), O(1)
     suma = 0 # O(0), O(1)
