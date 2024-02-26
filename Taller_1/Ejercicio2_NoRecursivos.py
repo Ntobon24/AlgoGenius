@@ -25,12 +25,5 @@ def encontrar_mcd_no_recursivo(a: int, b: int) -> int: # O(1), O(1)
     
     return algoritmo_euclidiano(a, b)
 
-# Ejemplo de uso: # O(1), O(1)
-
-numero1 = 48 #O(1),	O(1)
-numero2 = 18 #O(1),	O(1)
-mcd = encontrar_mcd_no_recursivo(numero1, numero2) #O(1),	O(1)
-print(f"El MCD de {numero1} y {numero2} es: {mcd}") # O(1), O(1)
-
 #Complejidad Temporal: O(Log n)
 #Complejidad Espacial: O(1)
