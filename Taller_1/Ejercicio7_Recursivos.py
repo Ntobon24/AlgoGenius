@@ -1,4 +1,5 @@
-#Ejercicio 7 (Recursivo)
+#Equipo AlgoGenius
+#Ejercicio 7 (Recursivo) - Nicolás Tobón, Santiago Giraldo, Matías Herrera
 
 def suma_digitos(numero):
     if numero < 10:
