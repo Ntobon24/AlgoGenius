@@ -11,7 +11,6 @@ def mostrar_menu_conteo():
     print("\n1. Principio de la suma")
     print("2. Principio del producto")
     print("3. Volver al menú principal")
-
 def mostrar_menu_permutaciones_combinaciones():
     print("\nPermutaciones, Combinaciones y Variaciones:")
     print("Seleccione una opción: --> ")
@@ -19,3 +18,19 @@ def mostrar_menu_permutaciones_combinaciones():
     print("2. Combinaciones")
     print("3. Variaciones")
     print("4. Volver al menú principal")
+def manejar_menu_principal():
+    while True:
+        mostrar_menu_principal()
+        opcion = input("\nIngrese el número de la opción deseada: ")
+        if opcion == '1':
+            print("\nHas seleccionado: ¿Qué es un conteo?")
+            print("Respuesta: Un conteo es el acto de determinar la cantidad de elementos en un conjunto o la cantidad de resultados posibles en un experimento.")
+        elif opcion == '2':
+            manejar_menu_conteo()
+        elif opcion == '3':
+            manejar_menu_permutaciones_combinaciones()
+        elif opcion == '4':
+            print("¡Hasta luego!")
+            break
+        else:
+            print("Opción no válida. Por favor, seleccione una opción válida.")
