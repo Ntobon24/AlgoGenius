@@ -34,3 +34,17 @@ def manejar_menu_principal():
             break
         else:
             print("Opción no válida. Por favor, seleccione una opción válida.")
+def manejar_menu_conteo():
+    while True:
+        mostrar_menu_conteo()
+        opcion = input("\nIngrese el número de la opción deseada: ")
+        if opcion == '1':
+            print("\nHas seleccionado: Principio de la suma")
+            print("Respuesta: El principio de la suma establece que si un evento puede ocurrir de m maneras diferentes y otro evento puede ocurrir de n maneras diferentes, y si los dos eventos no pueden ocurrir simultáneamente, entonces el total de maneras de que uno de los dos eventos ocurra es m + n.")
+        elif opcion == '2':
+            print("\nHas seleccionado: Principio del producto")
+            print("Respuesta: El principio del producto establece que si un evento puede ocurrir de m maneras diferentes y otro evento puede ocurrir de n maneras diferentes, entonces el número total de maneras en que ambos eventos pueden ocurrir en secuencia es m * n.")
+        elif opcion == '3':
+            break
+        else:
+            print("Opción no válida. Por favor, seleccione una opción válida.")
