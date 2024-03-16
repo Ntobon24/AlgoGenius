@@ -11,3 +11,11 @@ def mostrar_menu_conteo():
     print("\n1. Principio de la suma")
     print("2. Principio del producto")
     print("3. Volver al menú principal")
+
+def mostrar_menu_permutaciones_combinaciones():
+    print("\nPermutaciones, Combinaciones y Variaciones:")
+    print("Seleccione una opción: --> ")
+    print("\n1. Permutaciones")
+    print("2. Combinaciones")
+    print("3. Variaciones")
+    print("4. Volver al menú principal")
