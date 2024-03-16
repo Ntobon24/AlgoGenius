@@ -1,3 +1,5 @@
+#Equipo AlgoGenius
+#Ejercicio Matriz(Recursivo) - Nicolás Tobón, Santiago Giraldo, Matías Herrera
 def recorrer_matriz(matriz, inicio_fila, fin_fila, inicio_columna, fin_columna):
     elementos = []
 
