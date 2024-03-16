@@ -48,3 +48,22 @@ def manejar_menu_conteo():
             break
         else:
             print("Opción no válida. Por favor, seleccione una opción válida.")
+def manejar_menu_permutaciones_combinaciones():
+    while True:
+        mostrar_menu_permutaciones_combinaciones()
+        opcion = input("\nIngrese el número de la opción deseada: ")
+        if opcion == '1':
+            print("\nHas seleccionado: Permutaciones")
+            print("Respuesta: Las permutaciones son los distintos ordenamientos que se pueden hacer con los elementos de un conjunto.")
+        elif opcion == '2':
+            print("\nHas seleccionado: Combinaciones")
+            print("Respuesta: Las combinaciones son subconjuntos de elementos de un conjunto, donde el orden de los elementos no importa.")
+        elif opcion == '3':
+            print("\nHas seleccionado: Variaciones")
+            print("Respuesta: Las variaciones son selecciones ordenadas de elementos de un conjunto.")
+        elif opcion == '4':
+            break
+        else:
+            print("Opción no válida. Por favor, seleccione una opción válida.")
+
+manejar_menu_principal()
