@@ -50,9 +50,9 @@ class ViewExercise:
                 
             else:
                 if elementos_se_repiten:
-                    return "Combinaciones con repeticion"
+                    return Formulas.combinaciones_con_repeticion()
                 else: 
-                    return "Combinaciones sin repeticion"
+                    return Formulas.combinaciones_sin_repeticion()
                 
 
 if __name__ == "__main__":
