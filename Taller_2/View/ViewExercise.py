@@ -1,4 +1,6 @@
 #from . import .
+from Taller_2.Model.Model import Formulas
+
 
 class ViewExercise:
     def __init__(self):
@@ -32,9 +34,9 @@ class ViewExercise:
         if todos_elementos_seleccionados:
             if orden_importa:
                 if elementos_se_repiten:
-                    return "Permutaciones con repetición"
+                    return Formulas.permutaciones_con_repeticion()
                 else:
-                    return "Permutaciones sin repetición"    
+                    return Formulas.permutaciones_sin_repeticion()
                 
             else:
                 return "El orden sí importa para las permutaciones"    
@@ -44,7 +46,7 @@ class ViewExercise:
                 if elementos_se_repiten:
                     return "Variaciones con repeticion"
                 else:
-                    return "Variaciones sin repeticion"     
+                    return "Variaciones sin repeticion"
                 
             else:
                 if elementos_se_repiten:
@@ -57,4 +59,4 @@ if __name__ == "__main__":
     vista = ViewExercise()
     vista.mostrar_menu()
 
-            
+
