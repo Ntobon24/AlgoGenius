@@ -44,9 +44,9 @@ class ViewExercise:
         else: 
             if orden_importa:
                 if elementos_se_repiten:
-                    return "Variaciones con repeticion"
+                    return Formulas.variaciones_con_repeticion()
                 else:
-                    return "Variaciones sin repeticion"
+                    return Formulas.variaciones_sin_repeticion()
                 
             else:
                 if elementos_se_repiten:
