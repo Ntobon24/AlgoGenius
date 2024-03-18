@@ -116,5 +116,3 @@ def OINoIntervienenTodos():
             break
         else:
             print("Opción no válida. Por favor, seleccione una opción válida.")
-
-MenuPrincipal()

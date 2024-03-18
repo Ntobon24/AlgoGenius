@@ -5,12 +5,16 @@ def mostrar_menu_principal():
     print("2. Principios básicos de conteo")
     print("3. Permutaciones, Combinaciones y Variaciones")
     print("4. Salir")
+
+
 def mostrar_menu_conteo():
     print("\nPrincipios básicos de conteo:")
     print("Seleccione una opción: --> ")
     print("\n1. Principio de la suma")
     print("2. Principio del producto")
     print("3. Volver al menú principal")
+
+
 def mostrar_menu_permutaciones_combinaciones():
     print("\nPermutaciones, Combinaciones y Variaciones:")
     print("Seleccione una opción: --> ")
@@ -18,6 +22,8 @@ def mostrar_menu_permutaciones_combinaciones():
     print("2. Combinaciones")
     print("3. Variaciones")
     print("4. Volver al menú principal")
+
+
 def manejar_menu_principal():
     while True:
         mostrar_menu_principal()
@@ -34,6 +40,8 @@ def manejar_menu_principal():
             break
         else:
             print("Opción no válida. Por favor, seleccione una opción válida.")
+
+
 def manejar_menu_conteo():
     while True:
         mostrar_menu_conteo()
@@ -48,6 +56,8 @@ def manejar_menu_conteo():
             break
         else:
             print("Opción no válida. Por favor, seleccione una opción válida.")
+
+
 def manejar_menu_permutaciones_combinaciones():
     while True:
         mostrar_menu_permutaciones_combinaciones()
@@ -66,4 +76,3 @@ def manejar_menu_permutaciones_combinaciones():
         else:
             print("Opción no válida. Por favor, seleccione una opción válida.")
 
-manejar_menu_principal()
