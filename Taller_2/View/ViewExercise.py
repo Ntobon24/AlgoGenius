@@ -7,7 +7,7 @@ def MenuPrincipal():
     while True:
         print("¿El orden en que se seleccionan los elementos importa? ")
         print("1. Si")
-        print("2. No")A
+        print("2. No")
         print("3. Salir a menu principal")
 
         opcion = input("Seleccione una opción: ")
@@ -133,4 +133,3 @@ def OINoIntervienenTodos():
         else:
             print("Opción no válida. Por favor, seleccione una opción válida.")
 
-MenuPrincipal()
