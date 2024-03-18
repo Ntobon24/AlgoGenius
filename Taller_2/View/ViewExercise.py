@@ -1,62 +1,120 @@
-#from . import .
 from Taller_2.Model.Model import Formulas
 
 
-class ViewExercise:
-    def __init__(self):
-        self.solucion = Clase()
-
-
-    def mostrar_menu():
-        print("Programa de ejercicios de variaciones, permutaciones y combinaciones\n")
-
+def MenuPrincipal():
     while True:
-        print("Responde las siguientes preguntas: ")    
-        print("¿El orden en que se seleccionan los elementos importa? (s/n)")
-        orden_importa = input().lower() == 's'
+        print("¿El orden en que se seleccionan los elementos importa? ")
+        print("1. Si")
+        print("2. No")
+        print("3. Salir")
 
-        print("¿Se repiten elementos en la selección? (s/n) ")
-        elementos_se_repiten = input().lower() == 's'
-            
-        print("¿Entran todos los elementos disponibles? (s/n)")
-        todos_elementos_seleccionados = input().lower() == 's'
+        opcion = input("Seleccione una opción: ")
 
-        tecnica = self.determinar_tecnica(orden_importa, elementos_se_repiten, todos_elementos_seleccionados)
-        print("La técnica que se debe utilizar es {tecnica}\n")
-
-        print("¿Deseas resolver otro ejercicio? (s/n)")
-        continuar = input().lower() == 's'
-        if not continuar:
+        if opcion == "1":
+            print("Ha seleccionado la opción 1")
+            menuOrdenImporta()
+        elif opcion == "2":
+            print("Ha seleccionado la opción 2")
+            MenuOrdenNoImporta()
+        elif opcion == "3":
             break
-
-        
-    def determinar_tecnica(self, orden_importa, elementos_se_repiten, todos_elementos_seleccionados):
-        if todos_elementos_seleccionados:
-            if orden_importa:
-                if elementos_se_repiten:
-                    return Formulas.permutaciones_con_repeticion()
-                else:
-                    return Formulas.permutaciones_sin_repeticion()
-                
-            else:
-                return "El orden sí importa para las permutaciones"    
-            
-        else: 
-            if orden_importa:
-                if elementos_se_repiten:
-                    return Formulas.variaciones_con_repeticion()
-                else:
-                    return Formulas.variaciones_sin_repeticion()
-                
-            else:
-                if elementos_se_repiten:
-                    return Formulas.combinaciones_con_repeticion()
-                else: 
-                    return Formulas.combinaciones_sin_repeticion()
-                
-
-if __name__ == "__main__":
-    vista = ViewExercise()
-    vista.mostrar_menu()
+        else:
+            print("Opción no válida. Por favor, seleccione una opción válida.")
 
 
+def menuOrdenImporta():
+    while True:
+        print("¿Intervienen todos los elementos? ")
+        print("1. Si")
+        print("2. No")
+        print("3. Salir")
+
+        opcion = input("Seleccione una opción: ")
+
+        if opcion == "1":
+            print("Ha seleccionado la opción 1")
+            OIIntervienenTodos()
+        elif opcion == "2":
+            print("Ha seleccionado la opción 2")
+            OINoIntervienenTodos()
+        elif opcion == "3":
+            break
+        else:
+            print("Opción no válida. Por favor, seleccione una opción válida.")
+
+
+def MenuOrdenNoImporta():
+    while True:
+        print("¿Se repiten elementos? ")
+        print("1. Si")
+        print("2. No")
+        print("3. Salir")
+
+        opcion = input("Seleccione una opción: ")
+
+        if opcion == "1":
+            print("Ingresa la cantidad de elementos y de a cuanto se van a agrupar")
+            n = int(input("Cantidad de elementos: "))
+            r = int(input("Cantidad de elementos a agrupar: "))
+            print(Formulas.combinaciones_con_repeticion(n, r))
+        elif opcion == "2":
+            print("Ingresa la cantidad de elementos y de a cuanto se van a agrupar")
+            n = int(input("Cantidad de elementos: "))
+            r = int(input("Cantidad de elementos a agrupar: "))
+            print(Formulas.combinaciones_sin_repeticion(n, r))
+        elif opcion == "3":
+            break
+        else:
+            print("Opción no válida. Por favor, seleccione una opción válida.")
+
+
+def OIIntervienenTodos():
+    while True:
+        print("¿Se repiten elementos? ")
+        print("1. Si")
+        print("2. No")
+        print("3. Salir")
+
+        opcion = input("Seleccione una opción: ")
+
+        if opcion == "1":
+            print("Ingresa la cantidad de elementos y de a cuanto se van a agrupar")
+            n = int(input("Cantidad de elementos: "))
+            r = int(input("Cantidad de elementos a agrupar: "))
+            print(Formulas.permutaciones_con_repeticion(n, r))
+        elif opcion == "2":
+            print("Ingresa la cantidad de elementos y de a cuanto se van a agrupar")
+            n = int(input("Cantidad de elementos: "))
+            r = int(input("Cantidad de elementos a agrupar: "))
+            print(Formulas.permutaciones_sin_repeticion(n, r))
+        elif opcion == "3":
+            break
+        else:
+            print("Opción no válida. Por favor, seleccione una opción válida.")
+
+
+def OINoIntervienenTodos():
+    while True:
+        print("¿Se repiten elementos? ")
+        print("1. Si")
+        print("2. No")
+        print("3. Salir")
+
+        opcion = input("Seleccione una opción: ")
+
+        if opcion == "1":
+            print("Ingresa la cantidad de elementos y de a cuanto se van a agrupar")
+            n = int(input("Cantidad de elementos: "))
+            r = int(input("Cantidad de elementos a agrupar: "))
+            print(Formulas.variaciones_con_repeticion(n, r))
+        elif opcion == "2":
+            print("Ingresa la cantidad de elementos y de a cuanto se van a agrupar")
+            n = int(input("Cantidad de elementos: "))
+            r = int(input("Cantidad de elementos a agrupar: "))
+            print(Formulas.variaciones_sin_repeticion(n, r))
+        elif opcion == "3":
+            break
+        else:
+            print("Opción no válida. Por favor, seleccione una opción válida.")
+
+MenuPrincipal()
