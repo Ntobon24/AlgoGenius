@@ -6,7 +6,7 @@ def MenuPrincipal():
         print("¿El orden en que se seleccionan los elementos importa? ")
         print("1. Si")
         print("2. No")
-        print("3. Salir")
+        print("3. Salir a menu principal")
 
         opcion = input("Seleccione una opción: ")
 
@@ -34,9 +34,13 @@ def menuOrdenImporta():
         if opcion == "1":
             print("Ha seleccionado la opción 1")
             OIIntervienenTodos()
+            break
+
         elif opcion == "2":
             print("Ha seleccionado la opción 2")
             OINoIntervienenTodos()
+            break
+
         elif opcion == "3":
             break
         else:
@@ -53,15 +57,21 @@ def MenuOrdenNoImporta():
         opcion = input("Seleccione una opción: ")
 
         if opcion == "1":
+            print("Para la opcion seleccionada se debe realizar una combinacion con repeticion")
             print("Ingresa la cantidad de elementos y de a cuanto se van a agrupar")
             n = int(input("Cantidad de elementos: "))
             r = int(input("Cantidad de elementos a agrupar: "))
             print(Formulas.combinaciones_con_repeticion(n, r))
+            break
+
         elif opcion == "2":
+            print("Para la opcion seleccionada se debe realizar una combinacion sin repeticion")
             print("Ingresa la cantidad de elementos y de a cuanto se van a agrupar")
             n = int(input("Cantidad de elementos: "))
             r = int(input("Cantidad de elementos a agrupar: "))
             print(Formulas.combinaciones_sin_repeticion(n, r))
+            break
+
         elif opcion == "3":
             break
         else:
@@ -78,15 +88,21 @@ def OIIntervienenTodos():
         opcion = input("Seleccione una opción: ")
 
         if opcion == "1":
+            print("Para la opcion seleccionada se debe realizar una permutacion con repeticion")
             print("Ingresa la cantidad de elementos y de a cuanto se van a agrupar")
             n = int(input("Cantidad de elementos: "))
             r = int(input("Cantidad de elementos a agrupar: "))
             print(Formulas.permutaciones_con_repeticion(n, r))
+            break
+
         elif opcion == "2":
+            print("Para la opcion seleccionada se debe realizar una permutacion sin repeticion")
             print("Ingresa la cantidad de elementos y de a cuanto se van a agrupar")
             n = int(input("Cantidad de elementos: "))
             r = int(input("Cantidad de elementos a agrupar: "))
             print(Formulas.permutaciones_sin_repeticion(n, r))
+            break
+
         elif opcion == "3":
             break
         else:
@@ -103,15 +119,21 @@ def OINoIntervienenTodos():
         opcion = input("Seleccione una opción: ")
 
         if opcion == "1":
+            print("Para la opcion seleccionada se debe realizar una variación con repeticion")
             print("Ingresa la cantidad de elementos y de a cuanto se van a agrupar")
             n = int(input("Cantidad de elementos: "))
             r = int(input("Cantidad de elementos a agrupar: "))
             print(Formulas.variaciones_con_repeticion(n, r))
+            break
+
         elif opcion == "2":
+            print("Para la opcion seleccionada se debe realizar una variación sin repeticion")
             print("Ingresa la cantidad de elementos y de a cuanto se van a agrupar")
             n = int(input("Cantidad de elementos: "))
             r = int(input("Cantidad de elementos a agrupar: "))
             print(Formulas.variaciones_sin_repeticion(n, r))
+            break
+
         elif opcion == "3":
             break
         else:

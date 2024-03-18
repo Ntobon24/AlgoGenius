@@ -5,7 +5,7 @@ from Taller_2.View.ViewExplication import manejar_menu_principal
 def Menu():
     print("Seleccione una opción: ")
     print("1. Explicacion")
-    print("1. Realizar ejercicio")
+    print("2. Realizar ejercicio")
 
     while True:
         opcion = input("Seleccione una opción: ")
@@ -15,5 +15,3 @@ def Menu():
             MenuPrincipal()
         else:
             print("Opción no válida. Por favor, seleccione una opción válida.")
-
-Menu()
