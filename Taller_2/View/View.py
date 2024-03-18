@@ -3,6 +3,8 @@ from Taller_2.View.ViewExplication import manejar_menu_principal
 
 
 def Menu():
+    #Complejidad temporal: O(n), Complejidad espacial: O(1),
+    
     print("Seleccione una opción: ")
     print("1. Explicacion")
     print("2. Realizar ejercicio")
