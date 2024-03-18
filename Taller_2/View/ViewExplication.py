@@ -1,4 +1,4 @@
-def mostrar_menu_principal():
+def manejar_menu_principal():
     print("\nPrincipios de Conteo")
     print("Seleccione una opción: -->")
     print("\n1. ¿Qué es un conteo?")
@@ -6,27 +6,8 @@ def mostrar_menu_principal():
     print("3. Permutaciones, Combinaciones y Variaciones")
     print("4. Salir")
 
-
-def mostrar_menu_conteo():
-    print("\nPrincipios básicos de conteo:")
-    print("Seleccione una opción: --> ")
-    print("\n1. Principio de la suma")
-    print("2. Principio del producto")
-    print("3. Volver al menú principal")
-
-
-def mostrar_menu_permutaciones_combinaciones():
-    print("\nPermutaciones, Combinaciones y Variaciones:")
-    print("Seleccione una opción: --> ")
-    print("\n1. Permutaciones")
-    print("2. Combinaciones")
-    print("3. Variaciones")
-    print("4. Volver al menú principal")
-
-
-def manejar_menu_principal():
     while True:
-        mostrar_menu_principal()
+
         opcion = input("\nIngrese el número de la opción deseada: ")
         if opcion == '1':
             print("\nHas seleccionado: ¿Qué es un conteo?")
@@ -43,8 +24,14 @@ def manejar_menu_principal():
 
 
 def manejar_menu_conteo():
+    print("\nPrincipios básicos de conteo:")
+    print("Seleccione una opción: --> ")
+    print("\n1. Principio de la suma")
+    print("2. Principio del producto")
+    print("3. Volver al menú principal")
+
     while True:
-        mostrar_menu_conteo()
+
         opcion = input("\nIngrese el número de la opción deseada: ")
         if opcion == '1':
             print("\nHas seleccionado: Principio de la suma")
@@ -59,8 +46,14 @@ def manejar_menu_conteo():
 
 
 def manejar_menu_permutaciones_combinaciones():
+    print("\nPermutaciones, Combinaciones y Variaciones:")
+    print("Seleccione una opción: --> ")
+    print("\n1. Permutaciones")
+    print("2. Combinaciones")
+    print("3. Variaciones")
+    print("4. Volver al menú principal")
+
     while True:
-        mostrar_menu_permutaciones_combinaciones()
         opcion = input("\nIngrese el número de la opción deseada: ")
         if opcion == '1':
             print("\nHas seleccionado: Permutaciones")
@@ -75,4 +68,3 @@ def manejar_menu_permutaciones_combinaciones():
             break
         else:
             print("Opción no válida. Por favor, seleccione una opción válida.")
-
