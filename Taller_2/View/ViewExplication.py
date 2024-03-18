@@ -1,4 +1,5 @@
 def manejar_menu_principal():
+#Complejidad temporal: O(n), espacial: O(1)
     print("\nPrincipios de Conteo")
     print("Seleccione una opción: -->")
     print("\n1. ¿Qué es un conteo?")
@@ -24,6 +25,8 @@ def manejar_menu_principal():
 
 
 def manejar_menu_conteo():
+#Complejidad temporal: O(m), espacial: O(1)
+    
     print("\nPrincipios básicos de conteo:")
     print("Seleccione una opción: --> ")
     print("\n1. Principio de la suma")
@@ -46,6 +49,8 @@ def manejar_menu_conteo():
 
 
 def manejar_menu_permutaciones_combinaciones():
+    #Complejidad temporal: O(k), espacial: O(1)
+    
     print("\nPermutaciones, Combinaciones y Variaciones:")
     print("Seleccione una opción: --> ")
     print("\n1. Permutaciones")
