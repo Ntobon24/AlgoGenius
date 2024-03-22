@@ -35,3 +35,25 @@ def mostrar_respuesta(titulo, respuesta):
 
     ttk.Label(respuesta_window, text=titulo, font=("Helvetica", 14, "bold")).pack(pady=10)
     ttk.Label(respuesta_window, text=respuesta, wraplength=380, justify="left").pack(padx=20, pady=5)
+
+def manejar_menu_conteo():
+    window = tk.Tk()
+    window.title("Menú de Conteo")
+
+    ttk.Label(window, text="Principios básicos de conteo:", font=("Helvetica", 16, "bold")).pack(pady=10)
+    ttk.Label(window, text="Seleccione una opción: -->", font=("Helvetica", 12)).pack()
+
+    def opcion_seleccionada(opcion):
+        if opcion == 1:
+            mostrar_respuesta("Principio de la suma", "El principio de la suma establece que si un evento puede ocurrir de m maneras diferentes y otro evento puede ocurrir de n maneras diferentes, y si los dos eventos no pueden ocurrir simultáneamente, entonces el total de maneras de que uno de los dos eventos ocurra es m + n.")
+        elif opcion == 2:
+            mostrar_respuesta("Principio del producto", "El principio del producto establece que si un evento puede ocurrir de m maneras diferentes y otro evento puede ocurrir de n maneras diferentes, entonces el número total de maneras en que ambos eventos pueden ocurrir en secuencia es m * n.")
+        elif opcion == 3:
+            window.destroy()
+            manejar_menu_principal()
+
+    ttk.Button(window, text="Principio de la suma", command=lambda: opcion_seleccionada(1)).pack(pady=5)
+    ttk.Button(window, text="Principio del producto", command=lambda: opcion_seleccionada(2)).pack(pady=5)
+    ttk.Button(window, text="Volver al menú principal", command=lambda: opcion_seleccionada(3)).pack(pady=5)
+
+    window.mainloop()
