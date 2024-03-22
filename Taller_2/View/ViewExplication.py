@@ -27,3 +27,11 @@ def manejar_menu_principal():
     ttk.Button(window, text="Salir", command=lambda: opcion_seleccionada(4)).pack(pady=5)
 
     window.mainloop()
+
+def mostrar_respuesta(titulo, respuesta):
+    respuesta_window = tk.Toplevel()
+    respuesta_window.title(titulo)
+    respuesta_window.geometry("400x200")
+
+    ttk.Label(respuesta_window, text=titulo, font=("Helvetica", 14, "bold")).pack(pady=10)
+    ttk.Label(respuesta_window, text=respuesta, wraplength=380, justify="left").pack(padx=20, pady=5)
