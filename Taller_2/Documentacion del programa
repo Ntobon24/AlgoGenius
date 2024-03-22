@@ -1,0 +1,49 @@
+Nombre del Programa: Principios de Conteo
+
+Descripción:
+Este programa fue diseñado para ayudar a los usuarios a comprender y practicar los principios fundamentales del conteo en diseño de algoritmos. Proporciona una interfaz de usuario simple donde los usuarios pueden seleccionar entre dos opciones principales:
+
+Explicación: Proporciona información detallada sobre los conceptos clave relacionados con el conteo, como el principio de la suma, el principio del producto, permutaciones, combinaciones y variaciones.
+
+Realizar ejercicio: Permite a los usuarios resolver ejercicios prácticos relacionados con permutaciones, combinaciones y variaciones. El programa guía al usuario a través de una serie de preguntas para determinar el enfoque adecuado para resolver el problema y luego calcula la respuesta utilizando fórmulas matemáticas correspondientes.
+
+Propósito:
+El propósito de este programa es brindar una herramienta interactiva y educativa que facilite la comprensión y la práctica de los conceptos básicos del conteo en matemáticas. Está destinado a estudiantes que deseen mejorar sus habilidades en este campo. Al proporcionar explicaciones claras y ejercicios prácticos, el programa busca reforzar el aprendizaje y resolver ejercicios
+involucrados con el conteo.
+
+Desarrollado por: [AlgoGenius -> Nicolás, Matías, Santiago]
+
+Curso: [Diseño y análisis de algoritmos]
+
+Estructura de Datos y Algoritmos usadas:
+
+Fórmulas Matemáticas:
+
+Se utilizaron diversas fórmulas matemáticas para calcular permutaciones, combinaciones y variaciones, las cuales se implementaron como funciones en la clase Formulas. Estas fórmulas se basan en operaciones aritméticas simples y la función factorial de la biblioteca math.
+Interacción con el Usuario:
+
+Se implementaron bucles while para interactuar con el usuario a través de la consola. Estos bucles permiten al usuario seleccionar opciones del menú y proporcionan una interfaz intuitiva para ingresar datos y recibir resultados.
+Validación de Entrada:
+
+Se implementaron estructuras condicionales para validar la entrada del usuario y garantizar que solo se ingresen opciones válidas en el menú y valores numéricos positivos para los problemas de conteo.
+Arquitectura del Software:
+
+El software está diseñado siguiendo una arquitectura modular y dividido en dos partes principales: la vista y el modelo.
+
+Vista (View):
+
+La vista se encarga de la presentación de la información al usuario y la interacción con él. Esto incluye la impresión de menús, solicitudes de entrada y visualización de resultados. Las principales funciones de la vista se encuentran en los módulos ViewExercise.py y ViewExplication.py.
+Modelo (Model):
+
+El modelo contiene la lógica del negocio y las operaciones matemáticas necesarias para resolver los problemas de conteo. Incluye la clase Formulas, que proporciona métodos estáticos para calcular permutaciones, combinaciones y variaciones utilizando fórmulas matemáticas. Este módulo se encuentra en Model.py.
+Clases/Módulos Principales:
+
+ViewExercise.py:
+
+ViewExplication.py:
+
+Model.py:
+
+Main.py:
+
+Al tener una arquitectura "modular" es mucho más fácil hacer cambios si se necesitan ya que separa la vista de la lógica de negocio

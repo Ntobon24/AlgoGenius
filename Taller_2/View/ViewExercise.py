@@ -1,60 +1,175 @@
-#from . import .
-
-class ViewExercise:
-    def __init__(self):
-        self.solucion = Clase()
+from Taller_2.Model.Model import Formulas
 
 
-    def mostrar_menu():
-        print("Programa de ejercicios de variaciones, permutaciones y combinaciones\n")
+def MenuPrincipal():
 
+    #Complejidad temporal: O(1), espacial: O(1).
     while True:
-        print("Responde las siguientes preguntas: ")    
-        print("¿El orden en que se seleccionan los elementos importa? (s/n)")
-        orden_importa = input().lower() == 's'
+        print("¿El orden en que se seleccionan los elementos importa? ")
+        print("1. Si")
+        print("2. No")
+        print("3. Salir a menu principal")
 
-        print("¿Se repiten elementos en la selección? (s/n) ")
-        elementos_se_repiten = input().lower() == 's'
-            
-        print("¿Entran todos los elementos disponibles? (s/n)")
-        todos_elementos_seleccionados = input().lower() == 's'
+        opcion = input("Seleccione una opción: ")
 
-        tecnica = self.determinar_tecnica(orden_importa, elementos_se_repiten, todos_elementos_seleccionados)
-        print("La técnica que se debe utilizar es {tecnica}\n")
-
-        print("¿Deseas resolver otro ejercicio? (s/n)")
-        continuar = input().lower() == 's'
-        if not continuar:
+        if opcion == "1":
+            print("Ha seleccionado la opción 1")
+            menuOrdenImporta()
+        elif opcion == "2":
+            print("Ha seleccionado la opción 2")
+            MenuOrdenNoImporta()
+        elif opcion == "3":
             break
+        else:
+            print("Opción no válida. Por favor, seleccione una opción válida.")
 
-        
-    def determinar_tecnica(self, orden_importa, elementos_se_repiten, todos_elementos_seleccionados):
-        if todos_elementos_seleccionados:
-            if orden_importa:
-                if elementos_se_repiten:
-                    return "Permutaciones con repetición"
-                else:
-                    return "Permutaciones sin repetición"    
-                
+def menuOrdenImporta():
+    #Complejidad temporal: O(1), espacial: O(1).
+    while True:
+        print("¿Intervienen todos los elementos? ")
+        print("1. Si")
+        print("2. No")
+        print("3. Salir")
+
+        opcion = input("Seleccione una opción: ")
+
+        if opcion == "1":
+            print("Ha seleccionado la opción 1")
+            OIIntervienenTodos()
+            break
+        elif opcion == "2":
+            print("Ha seleccionado la opción 2")
+            OINoIntervienenTodos()
+            break
+        elif opcion == "3":
+            break
+        else:
+            print("Opción no válida. Por favor, seleccione una opción válida.")
+
+def MenuOrdenNoImporta():
+    while True:
+        try:
+            print("¿Se repiten elementos? ")
+            print("1. Si")
+            print("2. No")
+            print("3. Salir")
+
+            opcion = input("Seleccione una opción: ")
+
+            if opcion == "1":
+                print("Para la opción seleccionada se debe realizar una combinación con repetición")
+                print("Ingresa la cantidad de elementos y de a cuanto se van a agrupar")
+                n = int(input("Cantidad de elementos: "))
+                if n < 0:
+                    raise ValueError("n debe ser mayor o igual a 0")
+                r = int(input("Cantidad de elementos a agrupar: "))
+                if r < 0:
+                    raise ValueError("r debe ser mayor o igual a 0")
+                print(f"El resultado es: {Formulas.combinaciones_con_repeticion(n, r)}")
+                break
+            elif opcion == "2":
+                print("Para la opción seleccionada se debe realizar una combinación sin repetición")
+                print("Ingresa la cantidad de elementos y de a cuanto se van a agrupar")
+                n = int(input("Cantidad de elementos: "))
+                if n < 0:
+                    raise ValueError("n debe ser mayor o igual a 0")
+                r = int(input("Cantidad de elementos a agrupar: "))
+                if r < 0:
+                    raise ValueError("r debe ser mayor o igual a 0")
+                if n < r:
+                    raise ValueError("n debe ser mayor o igual a r")
+                print(f"El resultado es: {Formulas.combinaciones_sin_repeticion(n, r)}")
+                break
+            elif opcion == "3":
+                break
             else:
-                return "El orden sí importa para las permutaciones"    
-            
-        else: 
-            if orden_importa:
-                if elementos_se_repiten:
-                    return "Variaciones con repeticion"
-                else:
-                    return "Variaciones sin repeticion"     
-                
+                print("Opción no válida. Por favor, seleccione una opción válida.")
+        except ValueError as e:
+            print(f"Error: {e}. Por favor, ingrese un valor válido.")
+
+def OIIntervienenTodos():
+    while True:
+        try:
+            print("¿Se repiten elementos? ")
+            print("1. Si")
+            print("2. No")
+            print("3. Salir")
+
+            opcion = input("Seleccione una opción: ")
+
+            if opcion == "1":
+                print("Para la opción seleccionada se debe realizar una permutación con repetición")
+                print("Ingresa la cantidad de elementos y de a cuanto se van a agrupar")
+                n = int(input("Cantidad de elementos: "))
+                if n < 0:
+                    raise ValueError("n debe ser mayor o igual a 0")
+                r = int(input("Cantidad de elementos a agrupar: "))
+                if r < 0:
+                    raise ValueError("r debe ser mayor o igual a 0")
+                if n < r:
+                    raise ValueError("n debe ser mayor o igual a r")
+                print(f"El resultado es: {Formulas.permutaciones_con_repeticion(n, r)}")
+                break
+            elif opcion == "2":
+                print("Para la opción seleccionada se debe realizar una permutación sin repetición")
+                print("Ingresa la cantidad de elementos y de a cuanto se van a agrupar")
+                n = int(input("Cantidad de elementos: "))
+                if n < 0:
+                    raise ValueError("n debe ser mayor o igual a 0")
+                r = int(input("Cantidad de elementos a agrupar: "))
+                if r < 0:
+                    raise ValueError("r debe ser mayor o igual a 0")
+                if n < r:
+                    raise ValueError("n debe ser mayor o igual a r")
+                print(f"El resultado es: {Formulas.permutaciones_sin_repeticion(n, r)}")
+                break
+            elif opcion == "3":
+                break
             else:
-                if elementos_se_repiten:
-                    return "Combinaciones con repeticion"
-                else: 
-                    return "Combinaciones sin repeticion"
-                
+                print("Opción no válida. Por favor, seleccione una opción válida.")
+        except ValueError as e:
+            print(f"Error: {e}. Por favor, ingrese un valor válido.")
 
-if __name__ == "__main__":
-    vista = ViewExercise()
-    vista.mostrar_menu()
+def OINoIntervienenTodos():
+    while True:
+        try:
+            print("¿Se repiten elementos? ")
+            print("1. Si")
+            print("2. No")
+            print("3. Salir")
 
-            
+            opcion = input("Seleccione una opción: ")
+
+            if opcion == "1":
+                print("Para la opción seleccionada se debe realizar una variación con repetición")
+                print("Ingresa la cantidad de elementos y de a cuanto se van a agrupar")
+                n = int(input("Cantidad de elementos: "))
+                if n < 0:
+                    raise ValueError("n debe ser mayor o igual a 0")
+                r = int(input("Cantidad de elementos a agrupar: "))
+                if r < 0:
+                    raise ValueError("r debe ser mayor o igual a 0")
+                if n < r:
+                    raise ValueError("n debe ser mayor o igual a r")
+                print(f"El resultado es: {Formulas.variaciones_con_repeticion(n, r)}")
+                break
+            elif opcion == "2":
+                print("Para la opción seleccionada se debe realizar una variación sin repetición")
+                print("Ingresa la cantidad de elementos y de a cuanto se van a agrupar")
+                n = int(input("Cantidad de elementos: "))
+                if n < 0:
+                    raise ValueError("n debe ser mayor o igual a 0")
+                r = int(input("Cantidad de elementos a agrupar: "))
+                if r < 0:
+                    raise ValueError("r debe ser mayor o igual a 0")
+                if n < r:
+                    raise ValueError("n debe ser mayor o igual a r")
+                print(f"El resultado es: {Formulas.variaciones_sin_repeticion(n, r)}")
+                break
+            elif opcion == "3":
+                break
+            else:
+                print("Opción no válida. Por favor, seleccione una opción válida.")
+        except ValueError as e:
+            print(f"Error: {e}. Por favor, ingrese un valor válido.")
+
