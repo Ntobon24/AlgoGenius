@@ -1,6 +1,5 @@
 import tkinter as tk
 from tkinter import ttk
-
 def manejar_menu_principal():
     window = tk.Tk()
     window.title("Menú Principal")
