@@ -57,3 +57,30 @@ def manejar_menu_conteo():
     ttk.Button(window, text="Volver al menú principal", command=lambda: opcion_seleccionada(3)).pack(pady=5)
 
     window.mainloop()
+
+def manejar_menu_permutaciones_combinaciones():
+    window = tk.Tk()
+    window.title("Menú de Permutaciones, Combinaciones y Variaciones")
+
+    ttk.Label(window, text="Permutaciones, Combinaciones y Variaciones:", font=("Helvetica", 16, "bold")).pack(pady=10)
+    ttk.Label(window, text="Seleccione una opción: -->", font=("Helvetica", 12)).pack()
+
+    def opcion_seleccionada(opcion):
+        if opcion == 1:
+            mostrar_respuesta("Permutaciones", "Las permutaciones son los distintos ordenamientos que se pueden hacer con los elementos de un conjunto.")
+        elif opcion == 2:
+            mostrar_respuesta("Combinaciones", "Las combinaciones son subconjuntos de elementos de un conjunto, donde el orden de los elementos no importa.")
+        elif opcion == 3:
+            mostrar_respuesta("Variaciones", "Las variaciones son selecciones ordenadas de elementos de un conjunto.")
+        elif opcion == 4:
+            window.destroy()
+            manejar_menu_principal()
+
+    ttk.Button(window, text="Permutaciones", command=lambda: opcion_seleccionada(1)).pack(pady=5)
+    ttk.Button(window, text="Combinaciones", command=lambda: opcion_seleccionada(2)).pack(pady=5)
+    ttk.Button(window, text="Variaciones", command=lambda: opcion_seleccionada(3)).pack(pady=5)
+    ttk.Button(window, text="Volver al menú principal", command=lambda: opcion_seleccionada(4)).pack(pady=5)
+
+    window.mainloop()
+
+manejar_menu_principal()
