@@ -1,7 +1,8 @@
 import tkinter as tk
 from tkinter import ttk
 from Taller_2.Model.Model import Formulas
-
+# Complejidad temporal: O(1)
+# Complejidad espacial: O(1)
 
 def MenuPrincipal():
     window = tk.Tk()
