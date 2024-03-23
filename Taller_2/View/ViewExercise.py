@@ -105,25 +105,7 @@ def onii_se_repiten():
 
     ttk.Label(window, text="¿Se repiten elementos?", font=("Lato", 12)).pack()
     ttk.Button(window, text="Si", command=lambda: mostrar_resultado(Formulas.combinaciones_con_repeticion, "Combinaciones con Repetición"), style="Round.TButton").pack(pady=5)
-    ttk.Button(window, text="No", command=lambda: mostrar_resultado(Formulas.combinaciones_sin_repeticion, "Combinaciones sin Repetición"), style="Round.TButton").pack(pady=5)
-    ttk.Button(window, text="Salir", command=window.destroy, style="Round.TButton").pack(pady=5)
-
-    window.mainloop()
-
-
-def onii_no_se_repiten():
-    window = tk.Tk()
-    window.title("Menú de Orden (No Importa) - No Se Repiten Elementos")
-    window.geometry("300x200")
-
-    style = ttk.Style()
-    style.configure("Round.TButton", font=("Lato", 12), borderwidth=5, relief="raised", foreground="black",
-                    background="#D3D3D3", padding=10, width=15, anchor="center")
-    style.map("Round.TButton", foreground=[('pressed', 'black'), ('active', 'blue')])
-
-    ttk.Label(window, text="¿Se repiten elementos?", font=("Lato", 12)).pack()
-    ttk.Button(window, text="Si", command=lambda: mostrar_resultado(Formulas.variaciones_con_repeticion, "Variaciones con Repetición"), style="Round.TButton").pack(pady=5)
-    ttk.Button(window, text="No", command=lambda: mostrar_resultado(Formulas.variaciones_sin_repeticion, "Variaciones sin Repetición"), style="Round.TButton").pack(pady=5)
+    ttk.Button(window, text="No", command=lambda: mostrar_resultado(Formulas.combinaciones_sin_repeticion, "Combinaciones sin Repetición"),    style="Round.TButton").pack(pady=5)
     ttk.Button(window, text="Salir", command=window.destroy, style="Round.TButton").pack(pady=5)
 
     window.mainloop()
@@ -139,7 +121,8 @@ def mostrar_resultado(funcion, metodo):
                     background="#D3D3D3", padding=10, width=15, anchor="center")
     style.map("Round.TButton", foreground=[('pressed', 'black'), ('active', 'blue')])
 
-    ttk.Label(window, text="Ingrese la cantidad de elementos y de a cuanto se van a agrupar:", font=("Lato", 12)).pack(pady=10)
+    ttk.Label(window, text="Ingrese la cantidad de elementos y de a cuanto se van a agrupar:", font=("Lato", 12)).pack(
+        pady=10)
 
     entry_frame = ttk.Frame(window)
     entry_frame.pack(pady=5)
@@ -159,10 +142,18 @@ def mostrar_resultado(funcion, metodo):
         try:
             n = int(cantidad_entry.get())
             r = int(agrupar_entry.get())
+            if n <= 0 or r <= 0:
+                raise ValueError("Los valores deben ser mayores que cero.")
+            if r > n:
+                raise ValueError(
+                    "La cantidad de elementos a agrupar no puede ser mayor que la cantidad total de elementos.")
             resultado = funcion(n, r)
             resultado_label.config(text=f"Método: {metodo}\nEl resultado es: {resultado}")
         except ValueError as e:
-            resultado_label.config(text=f"Error: {e}. Por favor, ingrese un valor válido.")
+            if "invalid literal for int()" in str(e):
+                resultado_label.config(text="Error: Debe ingresar un número entero válido.")
+            else:
+                resultado_label.config(text=f"Error: {e}. Por favor, ingrese un valor válido.")
 
     ttk.Button(window, text="Calcular", command=calcular, style="Round.TButton").pack(pady=5)
 
@@ -170,3 +161,4 @@ def mostrar_resultado(funcion, metodo):
 
 
 MenuPrincipal()
+
