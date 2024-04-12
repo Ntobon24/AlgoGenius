@@ -25,7 +25,6 @@ def encontrar_combinaciones(cadena, combinacion="", combinaciones=set()):
 
     return sorted(combinaciones)
 
-# Ejemplos de uso
 entrada1 = "123"
 entrada2 = "1234"
 
