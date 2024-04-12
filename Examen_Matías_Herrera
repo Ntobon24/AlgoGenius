@@ -1,0 +1,21 @@
+Punto 3) Punto 3 (1.5): Una palabra de 7 letras se forma utilizando las letras A, B, C, D, E, F y G. ¿Cuántas
+permutaciones diferentes se pueden hacer si las letras A y B no pueden estar juntas?
+
+import math
+
+total_permutaciones = math.factorial(7)
+
+permutaciones_con_AB_juntos = 2 * math.factorial(6)
+
+permutaciones_sin_AB_juntos = total_permutaciones - permutaciones_con_AB_juntos
+
+print("El número de permutaciones donde A y B no pueden estar juntas es:", permutaciones_sin_AB_juntos)
+
+
+PUnto 2) Punto 2 (2.0): Dada una cadena de números de entrada, encuentre todas las combinaciones de números
+que se pueden formar usando dígitos en el mismo orden.
+
+
+
+
+Punto 1) Subido como PDF En la UVIRTUAL
