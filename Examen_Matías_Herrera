@@ -15,6 +15,25 @@ print("El número de permutaciones donde A y B no pueden estar juntas es:", perm
 PUnto 2) Punto 2 (2.0): Dada una cadena de números de entrada, encuentre todas las combinaciones de números
 que se pueden formar usando dígitos en el mismo orden.
 
+def encontrar_combinaciones(cadena, combinacion="", combinaciones=set()):
+    if not cadena:
+        combinaciones.add(combinacion.strip())
+        return
+    
+    encontrar_combinaciones(cadena[1:], combinacion + cadena[0] + " ", combinaciones)
+    encontrar_combinaciones(cadena[1:], combinacion + cadena[0], combinaciones)
+
+    return sorted(combinaciones)
+
+# Ejemplos de uso
+entrada1 = "123"
+entrada2 = "1234"
+
+print("Entrada:", entrada1)
+print("\n".join(encontrar_combinaciones(entrada1)))
+print("\nEntrada:", entrada2)
+print("\n".join(encontrar_combinaciones(entrada2)))
+
 
 
 
