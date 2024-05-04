@@ -1,7 +1,5 @@
 import tkinter as tk
 from tkinter import ttk
-# Complejidad temporal: O(1)
-# Complejidad espacial: O(1)
 def manejar_menu_principal():
     window = tk.Tk()
     window.title("Menú Principal")
