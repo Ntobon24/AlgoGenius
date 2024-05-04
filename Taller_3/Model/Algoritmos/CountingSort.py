@@ -4,3 +4,9 @@ def counting_sort(arr):
 
     for num in arr:
         count[num] += 1
+
+    output = []
+    for i in range(len(count)):
+        output.extend([i] * count[i])
+
+    return output
