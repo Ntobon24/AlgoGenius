@@ -1,25 +1,19 @@
-#Algoritmo sin implementar la API
-def bucket_sort(lista):
+def bucket_sort(arr, key):
     # Crear un diccionario para almacenar las cubetas
     buckets = {}
 
     # Agregar elementos a las cubetas
-    for num in lista:
-        if num in buckets:
-            buckets[num].append(num)
+    for item in arr:
+        bucket_key = item[key]
+        if bucket_key in buckets:
+            buckets[bucket_key].append(item)
         else:
-            buckets[num] = [num]
+            buckets[bucket_key] = [item]
 
     # Ordenar las cubetas y concatenarlas
-    sorted_list = []
-    for key in sorted(buckets.keys()):
-        sorted_list.extend(buckets[key])
+    sorted_arr = []
+    for bucket_key in sorted(buckets.keys()):
+        sorted_arr.extend(buckets[bucket_key])
 
-    return sorted_list
-
-#Ejemplo
-lista = [64, 34, 25, 12, 22, 11, 90]
-print("Algoritmo de ordenamiento: Bucket")
-print("Lista original:", lista)
-print("Lista ordenada:", bucket_sort(lista))
-
+    # Actualizar la lista original
+    arr[:] = sorted_arr
