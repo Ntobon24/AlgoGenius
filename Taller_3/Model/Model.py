@@ -6,5 +6,3 @@ url = "https://www.datos.gov.co/resource/ynam-yc42.json?$query=SELECT%20cole_nom
 response = requests.get(url)
 
 data = response.json()
-
-print(json.dumps(data, indent=4))
