@@ -1,6 +1,7 @@
 def counting_sort(arr, key):
     max_val = max(arr, key=lambda x: x[key])
-    count = [0] * (max_val[key] + 1)
+    max_val_int = int(max_val[key])
+    count = [0] * (max_val_int + 1)
 
     for num in arr:
         count[num[key]] += 1
