@@ -1,25 +1,25 @@
-def heapify(arr, n, i, key):
-    largest = i
-    l = 2 * i + 1
-    r = 2 * i + 2
+def heapify(arr, n, i, clave):
+    mayor = i
+    izquierda = 2 * i + 1
+    derecha = 2 * i + 2
 
-    if l < n and arr[i][key] < arr[l][key]:
-        largest = l
+    if izquierda < n and arr[i][clave] < arr[izquierda][clave]:
+        mayor = izquierda
 
-    if r < n and arr[largest][key] < arr[r][key]:
-        largest = r
+    if derecha < n and arr[mayor][clave] < arr[derecha][clave]:
+        mayor = derecha
 
-    if largest != i:
-        arr[i], arr[largest] = arr[largest], arr[i]
-        heapify(arr, n, largest, key)
+    if mayor != i:
+        arr[i], arr[mayor] = arr[mayor], arr[i]
+        heapify(arr, n, mayor, clave)
 
 
-def heap_sort(arr, key):
+def heap_sort(arr, clave):
     n = len(arr)
 
     for i in range(n, -1, -1):
-        heapify(arr, n, i, key)
+        heapify(arr, n, i, clave)
 
     for i in range(n - 1, 0, -1):
         arr[i], arr[0] = arr[0], arr[i]
-        heapify(arr, i, 0, key)
+        heapify(arr, i, 0, clave)
