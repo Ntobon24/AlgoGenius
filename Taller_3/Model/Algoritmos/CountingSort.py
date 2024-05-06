@@ -8,6 +8,8 @@ def counting_sort(arr, key):
 
     output = []
     for i in range(len(count)):
-        output.extend([i] * count[i])
+        if count[i] > 0:
+            for _ in range(count[i]):
+                output.append(next(item for item in arr if int(item[key]) == i))
+                output = arr
 
-    return output
