@@ -22,6 +22,5 @@ def factores_primos(n):
     return primos
 
 
-num = 84
-print("Los factores primos de", num, "son:")
-factores_primos(num)
+num = 15
+print(f"Los factores primos de {num} son {factores_primos(num)}")
